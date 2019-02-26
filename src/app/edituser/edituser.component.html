@@ -1,0 +1,85 @@
+
+<!-- <form>
+	<label style="padding-top: 100px">Name:</label>
+	<input type="text" name="name" placeholder="Enter your name"><br>
+	<label>Email:</label>
+	<input type="Email" name="email" placeholder="Enter your Email"><br>
+	<label>Mobile No.:</label>
+	<input type="text" name="mobile no." placeholder="Enter your Mobile No."><br>
+	<label>DOB:</label>
+	<input type="date" name="date"><br>
+	<button>submit</button>
+	
+
+
+</form>
+-->
+<div class="container">
+	<form class="form-horizontal" role="form">
+		<h1 *ngIf = "!user">Loading</h1>
+		<h2>Edit User Details</h2>
+		<div class="form-group">
+			<div class="row">
+				<label for="name" class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-9">
+					<input [(ngModel)]= "user.name" name="name" type="text"  id="name" placeholder="Name"  class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="emailid" class="col-sm-3 control-label">Email id</label>
+				<div class="col-sm-9">
+					<input  [(ngModel)]= "user.email" name="email" type="email" id="emailid" placeholder="Email Id" class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="mobileno" class="col-sm-3 control-label">Mobile No.</label>
+				<div class="col-sm-9">
+					<input  [(ngModel)]= "user.mobile" name="mobile" type="tel"   id="mobileno" placeholder="Mobile No." class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="dob" class="col-sm-3 control-label">DOB</label>
+				<div class="col-sm-9">
+					<input   [(ngModel)]= "user.dob" name="dob" type="text" id="dob" placeholder="First Name" class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="gender" class="col-sm-3 control-label">Gender</label>
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-4">
+							<label class="radio-inline">
+								<input   [(ngModel)]= "user.gender" name="gender" type="radio" id="femaleRadio" value="Female" name="gender" checked="checked">Female
+							</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="radio-inline">
+								<input   [(ngModel)]= "user.gender" name="gender" type="radio" id="maleRadio" value="Male" name="gender">Male
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-primary btn-block" (click)="editUser(user)">Submit</button>
+	</form>            
+<!-- 	{{user.name}}<br>
+	{{user.email}}<br>
+	{{user.mobile}}<br>
+	{{user.dob}}<br>
+	{{user.gender}}<br> -->
+
+	</div>
+

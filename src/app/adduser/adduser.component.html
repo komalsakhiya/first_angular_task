@@ -1,0 +1,78 @@
+
+<!-- <form>
+	<label style="padding-top: 100px">Name:</label>
+	<input type="text" name="name" placeholder="Enter your name"><br>
+	<label>Email:</label>
+	<input type="Email" name="email" placeholder="Enter your Email"><br>
+	<label>Mobile No.:</label>
+	<input type="text" name="mobile no." placeholder="Enter your Mobile No."><br>
+	<label>DOB:</label>
+	<input type="date" name="date"><br>
+	<button>submit</button>
+	
+
+
+</form>
+-->
+<div class="container">
+	<form class="form-horizontal" [formGroup]='addForm' role="form">
+		<h2>Add User</h2>
+		<div class="form-group">
+			<div class="row">
+				<label for="name" class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-9">
+					<input type="text" id="name" formControlName="name" placeholder="Name" class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="emailid" class="col-sm-3 control-label">Email id</label>
+				<div class="col-sm-9">
+					<input type="email" id="emailid" formControlName="email" placeholder="Email Id" class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="mobileno" class="col-sm-3 control-label">Mobile No.</label>
+				<div class="col-sm-9">
+					<input type="text" id="mobileno" formControlName="mobile" placeholder="Mobile No." class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="dob" class="col-sm-3 control-label">DOB</label>
+				<div class="col-sm-9">
+					<input type="date" id="dob" formControlName="dob" placeholder="First Name" class="form-control" autofocus>
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<label for="gender" class="col-sm-3 control-label">Gender</label>
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-4">
+							<label class="radio-inline">
+								<input type="radio" id="femaleRadio" formControlName="gender" value="Female" name="gender" checked="checked">Female
+							</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="radio-inline">
+								<input type="radio" id="maleRadio" formControlName="gender" value="Male" name="gender">Male
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary btn-block" (click)="add(addForm)">Submit</button>
+	</form>
+	<p> {{ addForm.status }} </p>
+</div>

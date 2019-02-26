@@ -1,0 +1,29 @@
+<h2>
+	User Details
+</h2>
+<div class="table" style="border-width: 2px; margin-bottom: 50px;">
+	<table class="table-responsive">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email Id</th>
+				<th>Mobile No.</th>
+				<th>DOB</th>
+				<th>Gender</th>
+			</tr>
+		</thead>
+		<tbody *ngIf="user">
+			<tr *ngFor="let u of user">
+				<td>{{u.id}}</td>
+				<td>{{u.name}}</td>
+				<td>{{u.email}}</td>
+				<td>{{u.mobile}}</td>
+				<td>{{u.dob}}</td>
+				<td>{{u.gender}}</td>
+				<td><button (click) ="edit(u.id)">Edit</button></td>
+				<td><button>Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
